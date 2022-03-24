@@ -37,7 +37,7 @@
 
 ## Overview
 
-![screenshot](<./src/components/assests/Screenshot%20(89).png>)
+![screenshot](<./src/assests/Screenshot%20(89).png>)
 
 ## About Project
 
