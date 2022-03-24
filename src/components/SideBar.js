@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { BiCurrentLocation } from "react-icons/bi";
 import { HiLocationMarker } from "react-icons/hi";
-import WeatherContext from "../components/context/WeatherContext";
+import WeatherContext from "../context/WeatherContext";
 import generateImage from "./imageGenerator/ImageGenerator";
 import "./SideBar.css";
 import SideBarMenu from "./SideBarMenu";

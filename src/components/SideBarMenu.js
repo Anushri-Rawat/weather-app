@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { MdOutlineClose, MdSearch, MdKeyboardArrowRight } from "react-icons/md";
 import classes from "./SideBarMenu.module.css";
-import WeatherContext from "./context/WeatherContext";
+import WeatherContext from "../context/WeatherContext";
 
 const SideBarMenu = (props) => {
   const ctx = useContext(WeatherContext);

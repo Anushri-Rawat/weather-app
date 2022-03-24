@@ -1,7 +1,6 @@
 import "./App.css";
 import Main from "./components/Main";
-import { WeatherContextProvider } from "./components/context/WeatherContext";
-import { Fragment } from "react";
+import { WeatherContextProvider } from "./context/WeatherContext";
 function App() {
   return (
     <WeatherContextProvider>

@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/Anushri-Rawat/weather-app">
       Solution
     </a>
     <span> | </span>
@@ -41,17 +41,17 @@
 
 ## About Project
 
-User can see city weather as default, preferably my current location
-User can search for city
-User can see weather of today and the next 5 days
-User can see the date and location of the weather
-User can see according to image for each type of weather
-User can see the min and max degree each day
-User can see wind status and wind direction
-User can see humidity percentage
-User can see a visibility indicator
-User can see the air pressure number
-User can convert temperature in Celcius to Fahrenheit and vice versa
+- User can see city weather as default, preferably my current location
+- User can search for city
+- User can see weather of today and the next 5 days
+- User can see the date and location of the weather
+- User can see according to image for each type of weather
+- User can see the min and max degree each day
+- User can see wind status and wind direction
+- User can see humidity percentage
+- User can see a visibility indicator
+- User can see the air pressure number
+- User can convert temperature in Celcius to Fahrenheit and vice versa
 
 ### Built With
 

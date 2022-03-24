@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import WeatherContext from "./context/WeatherContext";
+import WeatherContext from "../context/WeatherContext";
 import WeatherCard from "./WeatherCard";
 import "./RightSection.css";
 import HighLightCard from "./HighLightCard";

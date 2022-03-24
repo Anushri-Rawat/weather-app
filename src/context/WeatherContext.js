@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 const WeatherContext = createContext();
-const BASE_URL = "https://www.metaweather.com/api/location";
+const BASE_URL =
+  "https://cors-anywhere-venky.herokuapp.com/https://www.metaweather.com/api/location";
 export const WeatherContextProvider = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [cityWeatherData, setCityWeatherData] = useState(null);
