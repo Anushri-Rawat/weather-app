@@ -1,0 +1,41 @@
+.meter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.percentage {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.bar {
+  display: block;
+  height: 10px;
+  width: 100%;
+  background: #e7e7eb;
+  border-radius: 80px;
+}
+
+.bar .progress {
+  width: 0;
+  height: 100%;
+  background: #ffec65;
+  border-radius: 80px;
+  text-align: right;
+  transition: width 1s ease-in-out;
+}
+
+.meter span {
+  align-self: flex-end;
+  margin-top: 3px;
+}
+
+span {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 0.8rem;
+  color: #e7e7eb;
+}
