@@ -1,16 +1,18 @@
 .right-wrapper {
   background-color: #100e1d;
-  width: 68vw;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 42px 46px;
+  padding: 30px;
 }
 .weather-container {
   width: 100%;
   max-width: 890px;
   margin: 0 auto;
+  animation-name: bringCards;
+  animation-duration: 2s;
 }
 .converter-wrapper {
   display: flex;
@@ -52,6 +54,16 @@ h1 {
   margin-bottom: 32px;
   margin-top: 42px;
 }
+
+@keyframes bringCards {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
 @media (max-width: 1424px) {
   .weather-container {
     max-width: 790px;

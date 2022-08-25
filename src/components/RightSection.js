@@ -3,11 +3,17 @@ import WeatherContext from "../context/WeatherContext";
 import WeatherCard from "./WeatherCard";
 import "./RightSection.css";
 import HighLightCard from "./HighLightCard";
+
 const RightSection = () => {
-  const ctx = useContext(WeatherContext);
+  const {
+    state: { weatherData },
+    dispatch,
+  } = useContext(WeatherContext);
+
+  const currData = weatherData?.current;
+
   function tempCoverterHandler(e) {
     if (e.target.textContent.indexOf("F") > 0) {
-      console.log("hello");
       e.target.classList.add("active");
       e.target.previousElementSibling.classList.remove("active");
       const temps = document.querySelectorAll(".temp");
@@ -33,7 +39,7 @@ const RightSection = () => {
       });
     }
   }
-  const data = ctx.cityWeatherData.consolidated_weather;
+
   return (
     <section className="right-wrapper">
       <div className="weather-container">
@@ -44,37 +50,32 @@ const RightSection = () => {
           <button onClick={tempCoverterHandler}>&deg;F</button>
         </div>
         <div className="weather-card-wrapper" onClick={tempCoverterHandler}>
-          {data.map((weather, index) => {
-            if (index > 0) {
-              return (
-                <WeatherCard key={weather.id} weather={weather} index={index} />
-              );
-            }
-          })}
+          {weatherData?.daily.slice(1, 6).map((weather, index) => (
+            <WeatherCard key={weather.dt} index={index} weather={weather} />
+          ))}
         </div>
         <h1>Today's Highlights</h1>
         <div className="highlight-card-wrapper">
           <HighLightCard
             title="Wind status"
-            value={data[0].wind_speed.toFixed(0)}
+            value={currData.wind_speed.toFixed(0)}
             unit="mph"
-            wind_direction={data[0].wind_direction}
-            additional={data[0].wind_direction_compass}
+            wind_direction={currData.wind_deg}
           />
           <HighLightCard
             title="Humidity"
-            value={data[0].humidity}
+            value={currData.humidity}
             unit="%"
             meter="true"
           />
           <HighLightCard
             title="Visibility"
-            value={data[0].visibility.toFixed(1)}
+            value={(currData.visibility * 0.000621).toFixed(1)}
             unit="miles"
           />
           <HighLightCard
             title="Air Pressure"
-            value={data[0].air_pressure.toFixed(0)}
+            value={currData.pressure.toFixed(0)}
             unit="mb"
           />
         </div>

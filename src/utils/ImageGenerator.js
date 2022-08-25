@@ -9,43 +9,39 @@ import HeavyCloud from "../assests/HeavyCloud.png";
 import LightCloud from "../assests/LightCloud.png";
 import Clear from "../assests/Clear.png";
 
-const generateImage = (weather) => {
+const generateImage = (weather, id, icon) => {
   let imgSrc = "";
 
   switch (weather) {
-    case "sn":
+    case "Snow":
       imgSrc = Snow;
       break;
-    case "sl":
+    case "Haze":
       imgSrc = Sleet;
       break;
-    case "h":
+    case "Fog":
       imgSrc = Hail;
       break;
-    case "t":
+    case "Thunderstrom":
       imgSrc = Thunderstorm;
       break;
-    case "hr":
-      imgSrc = HeavyRain;
+    case "Rain":
+      if (id === 500) imgSrc = LightRain;
+      else imgSrc = HeavyRain;
       break;
-    case "lr":
-      imgSrc = LightRain;
-      break;
-    case "s":
+    case "Drizzle":
       imgSrc = Shower;
       break;
     case "hc":
-      imgSrc = HeavyCloud;
+      if (id <= 802) imgSrc = LightCloud;
+      else imgSrc = HeavyCloud;
       break;
-    case "lc":
-      imgSrc = LightCloud;
-      break;
-    case "c":
+    case "Clear":
       imgSrc = Clear;
       break;
 
     default:
-      imgSrc = Clear;
+      imgSrc = `http://openweathermap.org/img/wn/${icon}@2x.png`;
       break;
   }
 

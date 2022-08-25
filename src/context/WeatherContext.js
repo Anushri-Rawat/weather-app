@@ -1,51 +1,26 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useReducer } from "react";
+import reducer from "./reducer";
+import { getDataFromLocation } from "../actions/helperFunction";
+
+const initialState = {
+  latitude: "",
+  longitude: "",
+  loading: true,
+  weatherData: null,
+  city: "dehradun",
+};
+
 const WeatherContext = createContext();
-const BASE_URL =
-  "https://cors-anywhere-venky.herokuapp.com/https://www.metaweather.com/api/location";
-export const WeatherContextProvider = (props) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [cityWeatherData, setCityWeatherData] = useState(null);
-  const getDataFromLocation = async (title) => {
-    setIsLoading(true);
-    const res = await fetch(`${BASE_URL}/search/?query=${title}`);
-    const data = await res.json();
-    if (data[0]) {
-      fetchWoeidLocation(data[0].woeid);
-    }
-  };
-  const getDataFromLatLong = async (latLong) => {
-    setIsLoading(true);
-    const res = await fetch(`${BASE_URL}/search/?query=${latLong}`);
-    const data = await res.json();
-    if (data[0]) {
-      fetchWoeidLocation(data[0].woeid);
-    }
-  };
-  const fetchWoeidLocation = async (woeid) => {
-    const res = await fetch(`${BASE_URL}/${woeid}`);
-    const data = await res.json();
-    setCityWeatherData(data);
-    setIsLoading(false);
-  };
-
-  useEffect(() => {
-    // navigator.geolocation.getCurrentPosition(function (pos) {
-    //   console.log(pos.coords.latitude, pos.coords.longitude);
-    //   getDataFromLatLong(`${pos.coords.latitude},${pos.coords.longitude}`);
-    // });
-    getDataFromLocation("new delhi");
-  }, []);
-
+export const WeatherContextProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <WeatherContext.Provider
       value={{
-        isLoading,
-        cityWeatherData,
-        getDataFromLocation,
-        getDataFromLatLong,
+        state,
+        dispatch,
       }}
     >
-      {props.children}
+      {children}
     </WeatherContext.Provider>
   );
 };
