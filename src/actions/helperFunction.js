@@ -2,7 +2,7 @@ export const getDataFromLatLong = async (lat, long, dispatch) => {
   dispatch({ type: "START_LOADING" });
   try {
     const res = await fetch(
-      `${process.env.REACT_APP_BASE_URL}/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly,alerts&appid=${REACT_APP_API_KEY}`
+      `${process.env.REACT_APP_BASE_URL}/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly,alerts&appid=${process.env.REACT_APP_API_KEY}`
     );
     if (!res.ok) {
       throw new Error(`${res.status} ${res.statusText}`);
@@ -24,7 +24,7 @@ export const getDataFromLocation = async (city, dispatch) => {
   dispatch({ type: "SET_CITYNAME", payload: city });
   try {
     const res = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${REACT_APP_API_KEY}`
+      `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}`
     );
     if (!res.ok) {
       throw new Error(`${res.status} ${res.statusText}`);
