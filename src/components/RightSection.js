@@ -58,24 +58,24 @@ const RightSection = () => {
         <div className="highlight-card-wrapper">
           <HighLightCard
             title="Wind status"
-            value={currData.wind_speed.toFixed(0)}
+            value={currData?.wind_speed.toFixed(0)}
             unit="mph"
             wind_direction={currData.wind_deg}
           />
           <HighLightCard
             title="Humidity"
-            value={currData.humidity}
+            value={currData?.humidity}
             unit="%"
             meter="true"
           />
           <HighLightCard
             title="Visibility"
-            value={(currData.visibility * 0.000621).toFixed(1)}
+            value={(currData?.visibility * 0.000621).toFixed(1)}
             unit="miles"
           />
           <HighLightCard
             title="Air Pressure"
-            value={currData.pressure.toFixed(0)}
+            value={currData?.pressure.toFixed(0)}
             unit="mb"
           />
         </div>
