@@ -1,26 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Weather Master app</h1>
-
-<div align="center">
-   Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
-</div>
-
-<div align="center">
-  <h3>
-    <a href="https://{your-demo-link.your-domain}">
-      Demo
-    </a>
-    <span> | </span>
-    <a href="https://github.com/Anushri-Rawat/weather-app">
-      Solution
-    </a>
-    <span> | </span>
-    <a href="https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv">
-      Challenge
-    </a>
-  </h3>
-</div>
+<h1 align="center">Weather App</h1>
 
 <!-- TABLE OF CONTENTS -->
 
@@ -52,15 +32,13 @@
 - User can see a visibility indicator
 - User can see the air pressure number
 - User can convert temperature in Celcius to Fahrenheit and vice versa
+- User can toggle betw light an dark mode
 
 ### Built With
 
 - [React](https://reactjs.org/)
 - [CSS]
 
-## Features
-
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv) was to build an application to complete the given user stories.
 
 ## How To Use
 
