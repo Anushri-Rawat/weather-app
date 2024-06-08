@@ -1,6 +1,5 @@
 import { createContext, useReducer } from "react";
 import reducer from "./reducer";
-import { getDataFromLocation } from "../actions/helperFunction";
 
 const initialState = {
   latitude: "",
@@ -8,6 +7,7 @@ const initialState = {
   loading: true,
   weatherData: null,
   city: "dehradun",
+  theme:"dark",
 };
 
 const WeatherContext = createContext();

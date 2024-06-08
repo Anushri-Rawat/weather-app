@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500&display=swap");
 .highlight-card {
-  background-color: #1e213a;
+  background-color: var(--primary);
   /* min-width: 328px; */
   width: calc(50% - 14px);
   text-align: center;
@@ -16,7 +16,7 @@ h2 {
   font-size: 1rem;
   margin-bottom: 24px;
   text-align: center;
-  color: #e7e7eb;
+  color: var(--gray-color);
 }
 .measurement {
   font-family: "Raleway";
@@ -24,22 +24,22 @@ h2 {
   font-weight: 700;
   font-size: 64px;
   line-height: 75px;
-  color: #e7e7eb;
+  color: var(--gray-color);
 }
 .measurement small {
   font-weight: 500;
   font-size: 36px;
-  color: #e7e7eb;
+  color: var(--gray-color);
   padding-left: 10px;
 }
 .wind-direction {
   font-weight: 500;
   font-size: 14px;
-  color: #e7e7eb;
+  color: var(--gray-color);
   margin-top: 24px;
 }
 .wind-direction > button {
-  background: rgba(255, 255, 255, 0.3);
+  background: #ffffff4d;
   font-size: 1.5rem;
   border-radius: 50%;
   height: 45px;

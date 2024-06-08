@@ -1,11 +1,15 @@
 .right-wrapper {
-  background-color: #100e1d;
+  background-color: var(--right-bg);
   width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 30px;
+}
+.theme-block {
+  margin-left: 10px;
+  cursor: pointer;
 }
 .weather-container {
   width: 100%;
@@ -32,7 +36,7 @@
   cursor: pointer;
 }
 button.active {
-  background: #e7e7eb;
+  background: var(--gray-color);
   color: black;
 }
 .weather-card-wrapper {
@@ -50,7 +54,6 @@ button.active {
 h1 {
   font-weight: 700;
   font-size: 1.5rem;
-  color: white;
   margin-bottom: 32px;
   margin-top: 42px;
 }

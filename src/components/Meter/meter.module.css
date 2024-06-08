@@ -15,7 +15,6 @@
   display: block;
   height: 10px;
   width: 100%;
-  background: #e7e7eb;
   border-radius: 80px;
 }
 
@@ -37,5 +36,5 @@ span {
   font-weight: 700;
   font-size: 0.75rem;
   line-height: 0.8rem;
-  color: #e7e7eb;
+  color: var(--gray-color);
 }

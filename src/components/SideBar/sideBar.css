@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500&display=swap");
 .sidebar {
-  background-color: #1e213a;
+  background-color: var(--primary);
   width: 28vw;
   min-width: 420px;
   min-height: 100vh;
   padding: 30px;
-  background-image: url("../assests/Cloud-background.png");
+  background-image: url("/public/assests/Cloud-background.png");
   background-position-x: 60%;
   background-position-y: 12%;
   background-blend-mode: overlay;
@@ -18,11 +18,11 @@
   justify-content: space-between;
 }
 .search-btn {
-  background-color: #6e707a;
+  background-color: var(--bright-gray-color);
   padding: 10px 18px;
   border-radius: 1px;
   width: 180px;
-  color: #e7e7eb;
+  color: var(--gray-color);
   font-size: 16px;
   font-weight: 500;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.253);
@@ -32,8 +32,8 @@
 .gps-icon {
   width: 40px;
   height: 40px;
-  color: #e7e7eb;
-  background-color: #6e707a;
+  color: var(--gray-color);
+  background-color: var(--bright-gray-color);
   border-radius: 50%;
   padding: 9px;
   font-size: 22px;
@@ -61,16 +61,16 @@
   font-size: 120px;
   font-family: Raleway, sans-serif;
   line-height: 169px;
-  color: #e7e7eb;
+  color: var(--gray-color);
 }
 .unit {
   font-size: 42px;
   font-family: Raleway, sans-serif;
   font-weight: 500;
-  color: #a09fb1;
+  color: var(--dark-gray-color);
 }
 .weather-title {
-  color: #a09fb1;
+  color: var(--dark-gray-color);
   font-family: Raleway, sans-serif;
   font-size: 38px;
   min-height: 80px;
@@ -99,7 +99,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  color: #88869d;
+  color: var(--ddl-color);
 }
 .current-location {
   padding-top: 15px;

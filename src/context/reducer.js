@@ -20,6 +20,11 @@ const reducer = (state, action) => {
         ...state,
         city: action.payload,
       };
+    case "SET_THEME":
+      return{
+        ...state,
+        theme:action.payload
+      }
     default:
       return { ...state };
   }

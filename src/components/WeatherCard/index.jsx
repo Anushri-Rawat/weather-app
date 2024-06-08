@@ -1,5 +1,5 @@
-import "./WeatherCard.css";
-import generateImage from "../utils/ImageGenerator";
+import "./weatherCard.css";
+import generateImage from "../../utils/ImageGenerator";
 const WeatherCard = ({ weather, index }) => {
   const currDate = new Date(weather?.dt * 1000).toDateString().split(" ");
   const formattedDate = `${currDate[0]} , ${currDate[1]} ${currDate[2]}`;

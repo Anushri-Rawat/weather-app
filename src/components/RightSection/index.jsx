@@ -1,12 +1,13 @@
 import { useContext } from "react";
-import WeatherContext from "../context/WeatherContext";
-import WeatherCard from "./WeatherCard";
-import "./RightSection.css";
-import HighLightCard from "./HighLightCard";
+import WeatherContext from "../../context/WeatherContext";
+import WeatherCard from "../WeatherCard";
+import "./rightSection.css";
+import HighLightCard from "../HighlightCard";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 const RightSection = () => {
   const {
-    state: { weatherData },
+    state: { weatherData, theme },
     dispatch,
   } = useContext(WeatherContext);
 
@@ -40,6 +41,11 @@ const RightSection = () => {
     }
   }
 
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    dispatch({ type: "SET_THEME", payload: newTheme });
+  };
+
   return (
     <section className="right-wrapper">
       <div className="weather-container">
@@ -48,13 +54,28 @@ const RightSection = () => {
             &deg;C
           </button>
           <button onClick={tempCoverterHandler}>&deg;F</button>
+          <div className="theme-block">
+            {theme === "light" ? (
+              <FaSun
+                style={{ color: theme === "light" ? "#000" : "#fff" }}
+                onClick={toggleTheme}
+              />
+            ) : (
+              <FaMoon
+                style={{ color: theme === "light" ? "#000" : "#fff" }}
+                onClick={toggleTheme}
+              />
+            )}
+          </div>
         </div>
         <div className="weather-card-wrapper" onClick={tempCoverterHandler}>
           {weatherData?.daily.slice(1, 6).map((weather, index) => (
             <WeatherCard key={weather.dt} index={index} weather={weather} />
           ))}
         </div>
-        <h1>Today's Highlights</h1>
+        <h1 style={{ color: theme === "light" ? "#000" : "#fff" }}>
+          Today's Highlights
+        </h1>
         <div className="highlight-card-wrapper">
           <HighLightCard
             title="Wind status"

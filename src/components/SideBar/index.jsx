@@ -1,13 +1,13 @@
 import { useContext, useState } from "react";
 import { BiCurrentLocation } from "react-icons/bi";
 import { HiLocationMarker } from "react-icons/hi";
-import WeatherContext from "../context/WeatherContext";
-import generateImage from "../utils/ImageGenerator";
-import "./SideBar.css";
+import WeatherContext from "../../context/WeatherContext";
+import generateImage from "../../utils/ImageGenerator";
+import "./sideBar.css";
 import SideBarMenu from "./SideBarMenu";
-import { getCurrentLoactionWeather } from "../actions/helperFunction";
+import { getCurrentLoactionWeather } from "../../actions/helperFunction";
 
-const Sidebar = () => {
+const SideBar = () => {
   const {
     state: { weatherData, city },
     dispatch,
@@ -72,4 +72,4 @@ const Sidebar = () => {
     </section>
   );
 };
-export default Sidebar;
+export default SideBar;

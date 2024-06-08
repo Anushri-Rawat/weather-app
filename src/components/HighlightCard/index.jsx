@@ -1,7 +1,8 @@
-import classes from "./HighLightCard.module.css";
+import classes from "./highLightCard.module.css";
 import { MdNearMe } from "react-icons/md";
-import Meter from "./Meter.js";
-const HighLightCard = (props) => {
+import Meter from "../Meter/index.jsx";
+
+const HighlightCard = (props) => {
   return (
     <div className={classes["highlight-card"]}>
       <div className={classes["highlight-title"]}>{props.title}</div>
@@ -27,4 +28,4 @@ const HighLightCard = (props) => {
     </div>
   );
 };
-export default HighLightCard;
+export default HighlightCard;

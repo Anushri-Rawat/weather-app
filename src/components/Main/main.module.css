@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  min-height: 100vh;
+}
+.light-mode {
+  --primary: #9fa8da;
+  --primary-hover: #7986cb;
+  --ddl-color: #000;
+  --bright-gray-color: #fff;
+  --border-color:#000;
+}
+.dark-mode {
+  --primary: #1e213a;
+  --primary-hover: #050820;
+  --gray-color: #e7e7eb;
+  --dark-gray-color: #a09fb1;
+  --bright-gray-color: #6e707a;
+  --right-bg: #100e1d;
+  --ddl-color: #88869d;
+  --border-color:#e7e7eb;
+}
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
